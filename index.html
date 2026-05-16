@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sio Punci Coffee | Premium Experience</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root { --gold: #C5A059; --dark: #0A0A0A; --cream: #F4F1EA; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark); color: var(--cream); overflow-x: hidden; }
+        .serif { font-family: 'Playfair Display', serif; }
+
+        /* Background Bergambar Estetik (Overlay Dark Luxury) */
+        .bg-aesthetic {
+            background: linear-gradient(rgba(10,10,10,0.92), rgba(10,10,10,0.92)), 
+                        url('https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=2000');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Swiper Heights */
+        .swiper-home { height: 100vh; }
+        .swiper-menu-images, .swiper-gallery { padding-bottom: 50px !important; }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        /* Menu Original Style */
+        .menu-item-orig { border-bottom: 1px dashed rgba(255,255,255,0.1); padding: 8px 0; display: flex; justify-content: space-between; align-items: flex-end; }
+        .price-orig { color: var(--gold); font-weight: 600; margin-left: 10px; }
+        .category-card-orig { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px; border: 1px solid rgba(197, 160, 89, 0.2); }
+
+        .float-anim { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+
+        .pay-icon { filter: grayscale(1) invert(1); opacity: 0.6; transition: 0.3s; width: 45px; }
+        .pay-icon:hover { filter: grayscale(0) invert(0); opacity: 1; transform: scale(1.1); }
+
+        /* Social Icons Style */
+        .social-link { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid rgba(197, 160, 89, 0.3); transition: 0.3s; color: var(--gold); }
+        .social-link:hover { background: var(--gold); color: black; transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-aesthetic">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 px-8 py-6 flex justify-between items-center transition-all duration-500 text-white" id="main-header">
+        <div class="text-2xl font-bold tracking-[0.2em] serif">SIO PUNCI</div>
+        <nav class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-semibold">
+            <a href="#home" class="hover:text-[--gold]">Home</a>
+            <a href="#menu" class="hover:text-[--gold]">Menu</a>
+            <a href="#gallery" class="hover:text-[--gold]">Space</a>
+            <a href="#order" class="hover:text-[--gold]">Order</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-[1px] bg-[--gold]"></div>
+            <span class="text-[9px] uppercase tracking-widest text-[--gold]">Premium</span>
+        </div>
+    </header>
+
+    <!-- Owner Section -->
+    <section class="pt-32 pb-10 flex flex-col items-center">
+        <div class="relative group" data-aos="zoom-in">
+            <div class="w-32 h-32 rounded-full border-2 border-[--gold] p-1 overflow-hidden float-anim">
+                <img src="https://ui-avatars.com/api/?name=Sio+Punci&background=C5A059&color=fff&size=200" class="w-full h-full object-cover rounded-full" alt="Owner">
+            </div>
+            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-[--gold] text-black text-[8px] font-bold px-3 py-1 uppercase rounded-full">Founder</div>
+        </div>
+        <h2 class="serif italic text-2xl mt-4 text-[--gold]" data-aos="fade-up">Sio Punci</h2>
+    </section>
+
+    <!-- Home Slider -->
+    <section id="home">
+        <div class="swiper swiper-home">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative flex items-center justify-center">
+                    <img src="bg atas 2.png" class="absolute inset-0 w-full h-full object-cover brightness-[0.4]">
+                    <div class="relative text-center z-10" data-aos="fade-up">
+                        <h1 class="serif text-6xl md:text-9xl text-white mb-6">Kopi & Cerita</h1>
+                        <p class="text-white tracking-[0.5em] uppercase text-xs">Eksplorasi Rasa di Setiap Cangkir</p>
+                    </div>
+                </div>
+                <div class="swiper-slide relative flex items-center justify-center">
+                    <img src="Screenshot 2026-05-16 102306.png" class="absolute inset-0 w-full h-full object-cover brightness-[0.4]">
+                    <div class="relative text-center z-10">
+                        <h2 class="serif text-5xl md:text-8xl text-white">Semua Ada,<br>Selalu Ada.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Section Menu -->
+    <section id="menu" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h2 class="serif text-5xl mb-4 text-[--gold]">The Full Menu</h2>
+            <div class="w-20 h-1 bg-[--gold] mx-auto"></div>
+        </div>
+
+        <!-- Slider Gambar Makanan -->
+        <div class="swiper swiper-menu-images mb-20" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide glass-card p-4 rounded-2xl w-64">
+                    <img src="mentai rice.JPG" class="rounded-xl h-48 w-full object-cover mb-4 hover:scale-105 transition duration-500">
+                    <p class="text-center serif text-[--gold]">Mentai Rice</p>
+                </div>
+                <div class="swiper-slide glass-card p-4 rounded-2xl w-64">
+                    <img src="eskopi.jpg" class="rounded-xl h-48 w-full object-cover mb-4 hover:scale-105 transition duration-500">
+                    <p class="text-center serif text-[--gold]">Es Kopi Sio</p>
+                </div>
+                <div class="swiper-slide glass-card p-4 rounded-2xl w-64">
+                    <img src="dimsum sio.jpeg" class="rounded-xl h-48 w-full object-cover mb-4 hover:scale-105 transition duration-500">
+                    <p class="text-center serif text-[--gold]">Dimsum</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daftar Menu Lengkap -->
+        <div class="grid lg:grid-cols-3 gap-8" data-aos="fade-up">
+            <div class="space-y-8">
+                <div class="category-card-orig glass-card">
+                    <h3 class="serif text-2xl mb-6 border-b border-[--gold] pb-2 text-[--gold]">Main Course</h3>
+                    <div class="space-y-1 text-sm">
+                        <div class="menu-item-orig"><span>Mentai Rice</span><span class="price-orig">28k</span></div>
+                        <div class="menu-item-orig"><span>Katsu Curry Rice</span><span class="price-orig">28k</span></div>
+                        <div class="menu-item-orig"><span>Spaghetti Tuna D. Jeruk</span><span class="price-orig">28k</span></div>
+                        <div class="menu-item-orig"><span>Creamy Mushroom Katsu</span><span class="price-orig">30k</span></div>
+                        <div class="menu-item-orig"><span>Mie Tek Tek (Kuah/Grg)</span><span class="price-orig">15k</span></div>
+                        <div class="menu-item-orig"><span>Mie Yamin (Mns/Grh)</span><span class="price-orig">18k</span></div>
+                    </div>
+                </div>
+                <div class="category-card-orig bg-zinc-900/50 border-zinc-700">
+                    <h3 class="serif text-2xl mb-6 border-b border-[--gold] pb-2 text-[--gold]">Sunday's Special</h3>
+                    <div class="space-y-1 text-sm">
+                        <div class="menu-item-orig"><span>Gohyong</span><span class="price-orig">18k</span></div>
+                        <div class="menu-item-orig"><span>Fish and Chips</span><span class="price-orig">30k</span></div>
+                        <div class="menu-item-orig"><span>Rose Pasta</span><span class="price-orig">28k</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="category-card-orig glass-card">
+                    <h3 class="serif text-2xl mb-6 border-b border-[--gold] pb-2 text-[--gold]">Snacks</h3>
+                    <div class="space-y-1 text-sm">
+                        <div class="menu-item-orig"><span>French / Curry Fries</span><span class="price-orig">15/19k</span></div>
+                        <div class="menu-item-orig"><span>Tahu Walik / Bakso</span><span class="price-orig">16k</span></div>
+                        <div class="menu-item-orig"><span>Dimsum Mentai (S/M)</span><span class="price-orig">25/35k</span></div>
+                        <div class="menu-item-orig"><span>Honey Chicken Wings</span><span class="price-orig">18k</span></div>
+                    </div>
+                </div>
+                <div class="category-card-orig glass-card">
+                    <h3 class="serif text-2xl mb-6 border-b border-[--gold] pb-2 text-[--gold]">Cakes of Day</h3>
+                    <div class="space-y-1 text-sm">
+                        <div class="menu-item-orig"><span>Cheesecake</span><span class="price-orig">23k</span></div>
+                        <div class="menu-item-orig"><span>Tiramisu / Matchamisu</span><span class="price-orig">25k</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card-orig glass-card">
+                <h3 class="serif text-2xl mb-6 border-b border-[--gold] pb-2 text-[--gold]">Beverages</h3>
+                <div class="space-y-1 text-sm">
+                    <div class="menu-item-orig font-bold text-[--gold]"><span>Es Kopi Sio</span><span class="price-orig">20k</span></div>
+                    <div class="menu-item-orig"><span>Americano / Latte</span><span class="price-orig">18k</span></div>
+                    <div class="menu-item-orig"><span>Cremebrulee Latte</span><span class="price-orig">22k</span></div>
+                    <div class="menu-item-orig"><span>Pistachio Matcha</span><span class="price-orig">23k</span></div>
+                    <div class="menu-item-orig"><span>Manual Brew V60</span><span class="price-orig">23k</span></div>
+                    <div class="menu-item-orig"><span>Chocolate</span><span class="price-orig">20k</span></div>
+                    <div class="menu-item-orig"><span>Lemon Coldbrew</span><span class="price-orig">20k</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Gallery -->
+    <section id="gallery" class="py-24 bg-black/30">
+        <h2 class="serif text-center text-4xl mb-12">Our Ambience</h2>
+        <div class="swiper swiper-gallery">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide w-[300px] md:w-[500px] h-[400px] rounded-2xl overflow-hidden glass-card">
+                    <img src="suasana 5.png" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide w-[300px] md:w-[500px] h-[400px] rounded-2xl overflow-hidden glass-card">
+                    <img src="suasana 3.png" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-24 px-6 bg-white text-black">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="serif text-4xl mb-6">Pemesanan Cepat</h2>
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <label class="text-[10px] uppercase font-bold text-gray-400">Metode Pembayaran</label>
+                    <div class="flex gap-6 mt-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg" class="pay-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" class="pay-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" class="pay-icon">
+                        <div class="flex items-center gap-2 grayscale opacity-50"><i class="fa-solid fa-qrcode text-xl"></i> <span class="text-[9px] font-bold">QRIS</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-zinc-900 p-10 rounded-3xl text-white shadow-2xl float-anim" data-aos="zoom-in">
+                <select class="w-full bg-transparent border-b border-zinc-700 py-4 outline-none focus:border-[--gold] mb-6">
+                    <option class="bg-zinc-900">Pilih Menu Favorit...</option>
+                    <option class="bg-zinc-900">Mentai Rice</option>
+                    <option class="bg-zinc-900">Es Kopi Sio</option>
+                </select>
+                <a href="https://wa.me/6281370184275" class="block w-full bg-[--gold] text-black text-center py-4 rounded-xl font-bold uppercase text-xs tracking-widest">Pesan via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Social Media -->
+    <footer class="py-20 px-6 text-center bg-black border-t border-white/5">
+        <div data-aos="fade-up">
+            <h2 class="serif text-4xl text-[--gold] mb-4">Terima Kasih</h2>
+            <p class="max-w-xl mx-auto text-gray-400 font-light italic leading-relaxed mb-8">
+                "Setiap cangkir kopi yang kami seduh dan setiap hidangan yang kami sajikan adalah bentuk dedikasi kami untuk kenyamanan Anda."
+            </p>
+
+            <!-- SOCIAL MEDIA SECTION -->
+            <div class="flex justify-center gap-4 mb-12">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/6281370184275" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="mt-8">
+                <div class="serif text-2xl text-[--gold]">Sio Punci Coffee</div>
+                <p class="text-[9px] tracking-[0.5em] text-gray-600 uppercase mt-2">Pare • Kediri • East Java</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        new Swiper(".swiper-home", { loop: true, autoplay: { delay: 5000 }, pagination: { el: ".swiper-pagination", clickable: true } });
+        new Swiper(".swiper-menu-images", { slidesPerView: "auto", spaceBetween: 20, centeredSlides: true, loop: true });
+        new Swiper(".swiper-gallery", { effect: "coverflow", centeredSlides: true, slidesPerView: "auto", loop: true, coverflowEffect: { rotate: 20, stretch: 0, depth: 100, modifier: 1, slideShadows: true } });
+
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 100) { header.classList.add('bg-black/90', 'backdrop-blur-md', 'py-4'); } 
+            else { header.classList.remove('bg-black/90', 'backdrop-blur-md', 'py-4'); }
+        });
+
+        function playGreeting() {
+            const msg = new SpeechSynthesisUtterance("Selamat datang di restaurant kami, semua ada, selalu ada!");
+            msg.lang = 'id-ID';
+            window.speechSynthesis.speak(msg);
+            document.removeEventListener('click', playGreeting);
+        }
+        document.addEventListener('click', playGreeting);
+    </script>
+</body>
+</html>
